@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+public class basic_cal {
+    public static void main(String[] args) {
+
+        char operator;
+        int num1, num2, result;
+
+        Scanner input = new Scanner(System.in); // object of Scanner class
+
+        System.out.println("Choose an operator: +, -, *, or /"); // ask users to enter operator
+        operator = input.next().charAt(0);
+
+        System.out.println("Enter first number"); // ask users to enter numbers 1
+        num1 = input.nextInt();
+
+        System.out.println("Enter second number"); // ask users to enter numbers 2
+        num2 = input.nextInt();
+
+        switch (operator) {
+
+            case '+': // addition
+                result = num1 + num2;
+                System.out.println(num1 + " + " + num2 + " = " + result);
+                break;
+
+            case '-': // Subtraction
+                result = num1 - num2;
+                System.out.println(num1 + " - " + num2 + " = " + result);
+                break;
+
+            case '*': // multiplication
+                result = num1 * num2;
+                System.out.println(num1 + " * " + num2 + " = " + result);
+                break;
+
+            case '/': // division
+                result = num1 / num2;
+                System.out.println(num1 + " / " + num2 + " = " + result);
+                break;
+
+            default:
+                System.out.println("Invalid operator!");
+                break;
+        }
+    }
+}
