@@ -1,0 +1,50 @@
+import java.util.Scanner;
+
+public class Average {
+    public static void main(String[] args) {
+
+        int n;
+        System.out.println("Enter No. of Elements:");
+        Scanner sc = new Scanner(System.in);
+        n = sc.nextInt();
+
+        int[] array = new int[n];
+        System.out.println("Enter The Elements of The Array: ");
+        for (int i = 0; i < array.length; i++) {
+            array[i] = sc.nextInt();
+        }
+        int sum = 0;
+        for (int i = 0; i < array.length; i++) {
+            sum = sum + array[i];
+        }
+        float average = (float) sum / array.length;
+        System.out.println("Average value of the array elements is : " + average);
+    }
+}
+
+Test Case 1 : 
+Sample Input :
+Enter No. of Elements:
+4
+Enter The Elements of The Array:
+4
+5
+6
+8
+Sample Output :
+Average value of the array elements is : 5.75
+
+
+Test Case 2 : 
+Sample Input :
+Enter No. of Elements:
+5
+Enter The Elements of The Array:
+2
+4
+6
+7
+8
+Sample Output :
+Average value of the array elements is : 5.4
+
